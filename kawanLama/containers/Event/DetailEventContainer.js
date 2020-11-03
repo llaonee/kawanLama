@@ -26,7 +26,6 @@ class DetailEventContainer extends Component {
         "idEvent": this.state.dataEvent.id,
         "key" : key
     })
-    await console.log('post', postData)
     const response = await fetch(`${URL_API}Event/detailtrackevent`, {
         method: "POST",
         headers: {
@@ -36,7 +35,6 @@ class DetailEventContainer extends Component {
         body: postData
     });
     const dataRes = await response.json()
-    await console.log('detail',dataRes)
     if(dataRes == ''){
         await Alert.alert('Informasi', 'koneksi ke server gagal')
         }else{
@@ -72,7 +70,6 @@ class DetailEventContainer extends Component {
             "idEvent": id,
             "key" : key
         })
-        await console.log('post', postData)
         const response = await fetch(`${URL_API}Event/detailtrackevent`, {
             method: "POST",
             headers: {
@@ -82,7 +79,6 @@ class DetailEventContainer extends Component {
             body: postData
         });
         const dataRes = await response.json()
-        await console.log('next detail',dataRes)
         if(dataRes == ''){
             await Alert.alert('Informasi', 'koneksi ke server gagal')
             }else{
@@ -103,7 +99,6 @@ class DetailEventContainer extends Component {
         "idEvent": state.detailEvent.id,
         "key" : key
     })
-    await console.log('post', postData)
     const response = await fetch(`${URL_API}Event/addtrackevent`, {
         method: "POST",
         headers: {
@@ -130,7 +125,6 @@ class DetailEventContainer extends Component {
         "idEvent": state.detailEvent.id,
         "key" : key
     })
-    await console.log('post', postData)
     const response = await fetch(`${URL_API}Event/deletetrackevent`, {
         method: "POST",
         headers: {

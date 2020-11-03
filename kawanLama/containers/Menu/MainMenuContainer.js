@@ -29,7 +29,6 @@ class MainMenuContainer extends Component{
             "idUser":state.dataUser.UserId,
             "key":key
         })
-        await console.log('post', postData)
         const response = await fetch(`${URL_API}Event/getevent`, {
             method: "POST",
             headers: {
@@ -39,7 +38,6 @@ class MainMenuContainer extends Component{
             body: postData
         });
         const dataRes = await response.json()
-        await console.log('res',dataRes)
         if(dataRes == ''){
             await Alert.alert('Informasi', 'koneksi ke server gagal')
             }else{
@@ -53,7 +51,6 @@ class MainMenuContainer extends Component{
         }
     }
     render(){
-        console.log('data', this.state)
         const state = this.state
         return(
             <MainMenu

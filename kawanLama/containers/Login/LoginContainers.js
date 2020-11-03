@@ -21,7 +21,6 @@ class LoginContainer extends Component{
             "name":state.Name,
             "key":key
         })
-        await console.log('post', postData)
         const response = await fetch(`${URL_API}Event/getuser`, {
             method: "POST",
             headers: {
@@ -31,7 +30,6 @@ class LoginContainer extends Component{
             body: postData
         });
         const dataRes = await response.json()
-        console.log('user',dataRes)
         if(dataRes == ''){
             await Alert.alert('Informasi', 'koneksi ke server gagal')
             }else{
@@ -43,7 +41,6 @@ class LoginContainer extends Component{
         }
     }
     render(){
-        console.log('kaka', this.state)
         return(
             <Login
 
