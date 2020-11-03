@@ -15,7 +15,6 @@ class LoginContainer extends Component{
             Name:''
         }
     }
-    // this.props.navigation.navigate('MainMenuContainer')
     async getUser(){
         const state = this.state
         const postData = await JSON.stringify( {

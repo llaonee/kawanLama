@@ -6,13 +6,10 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 
-// IMPORT OWN ASSETS
-// import { Fonts } from '../js/Fonts'
 import colors from '../assets/colors';
 
 const Header = props => (
   <View style={styles.shadow}>
-    {/* <StatusBar backgroundColor={colors.white}/> */}
     <SafeAreaView style={ styles.safeArea }/>
     <View style={ styles.wrapperHeader }>
       <TouchableOpacity onPress={ props.goBack } style={ styles.wrappericonBack }>
